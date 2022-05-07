@@ -35,51 +35,26 @@ $('#17').val(localStorage.getItem('17'));
 
 
 var timeColor = function(){
+
+  var currentTime = moment().format('HH');
+  console.log(currentTime);  
   
-  var currentTime = moment().format('HH').toString();
-  console.log(currentTime)  
-  
-  var hour=$(this).children(".text-block").attr('id');
+$(".text-block").each(function(){
+  var hour=$(this).attr('id');
 
-
-$("text-block").each(function(){
-
-  if (currentTime < hour) {
-    $('textarea').addClass("past");
-  } else if (currentTime > hour) {
-      $("textarea").addClass("future");
+  if (hour < currentTime) {
+    $(this).addClass("past");
+  } else if (hour > currentTime) {
+      $(this).addClass("future");
   } else {
-      $("textarea").addClass("present");
+      $(this).addClass("present");
   }
-
- 
-})
+});
 
 }
 
+
  timeColor ();
 
-// var timeColor = function(){
-
-  
-//   var hour;
-//   var prefix = 'hour';
-
-//   var currentTime = moment().format('HH').toString();
-//   console.log(currentTime)  
-
-//   for (var i = 9; hour = document.getElementById(prefix + i); i++) {
-    
-//     if (currentTime < hour) {
-//       $('textarea').addClass("past");
-//     } else if (currentTime > hour) {
-//         $("textarea").addClass("future");
-//     } else {
-//         $("textarea").addClass("present");
-//     }
-
-//   }
-  
-// }
 
 
