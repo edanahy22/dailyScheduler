@@ -39,7 +39,7 @@ var timeColor = function(){
   var currentTime = moment().format('HH').toString();
   console.log(currentTime)  
   
-  var hour= $('#16');
+  var hour=$(this).children(".text-block").attr('id');
 
 
 $("text-block").each(function(){
