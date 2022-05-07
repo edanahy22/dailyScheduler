@@ -21,32 +21,37 @@ $('.saveBtn').on("click", function(){
 
 // calling from local storage
 // console.log(localStorage.getItem('9'));
-$('#9').val(localStorage.getItem('9'));
-$('#10').val(localStorage.getItem('10'));
-$('#11').val(localStorage.getItem('11'));
-$('#12').val(localStorage.getItem('12'));
-$('#13').val(localStorage.getItem('13'));
-$('#14').val(localStorage.getItem('14'));
-$('#15').val(localStorage.getItem('15'));
-$('#16').val(localStorage.getItem('16'));
-$('#17').val(localStorage.getItem('17'));
+$('#hour9').val(localStorage.getItem('hour9'));
+$('#hour10').val(localStorage.getItem('hour10'));
+$('#hour11').val(localStorage.getItem('hour11'));
+$('#hour12').val(localStorage.getItem('hour12'));
+$('#hour13').val(localStorage.getItem('hour13'));
+$('#hour14').val(localStorage.getItem('hour14'));
+$('#hour15').val(localStorage.getItem('hour15'));
+$('#hour16').val(localStorage.getItem('hour16'));
+$('#hour17').val(localStorage.getItem('hour17'));
 
 
-var currentTime = function(){
-  var hour = $('.text-block').attr('id');
-  console.log(hour);
+var timeColor = function(){
+  var hour;
+  var prefix = 'hour';
 
-  var time = moment().format('LT');
-  console.log(time)
+  var currentTime = moment().format('HH').toString();
+  console.log(currentTime)  
 
-  if (moment().format('LT').isAfter(hour)) {
-    $('.text-block').addClass(".past");
-  } else if (moment().format('LT').isBefore(hour)) {
-      $(".text-block").addClass(".future");
-  } else {
-      $(".text-block").addClass(".present");
+  for (var i = 9; hour = document.getElementById(prefix + i); i++) {
+    
+    if (currentTime < hour) {
+      $('textarea').addClass("past");
+    } else if (currentTime > hour) {
+        $("textarea").addClass("future");
+    } else {
+        $("textarea").addClass("present");
+    }
+
   }
+  
 }
 
-currentTime();
+timeColor();
 
