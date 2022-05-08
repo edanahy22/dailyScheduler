@@ -21,7 +21,7 @@ $('.saveBtn').on("click", function(){
 
 // calling from local storage
 // console.log(localStorage.getItem('9'));
-$('#9').val(localStorage.getItem('9'));
+$('#09').val(localStorage.getItem('09'));
 $('#10').val(localStorage.getItem('10'));
 $('#11').val(localStorage.getItem('11'));
 $('#12').val(localStorage.getItem('12'));
@@ -33,7 +33,7 @@ $('#17').val(localStorage.getItem('17'));
 
 
 
-
+// time block colors determined by current time
 var timeColor = function(){
 
   var currentTime = moment().format('HH');
@@ -42,9 +42,9 @@ var timeColor = function(){
 $(".text-block").each(function(){
   var hour=$(this).attr('id');
 
-  if (hour < currentTime) {
+  if (currentTime > hour) {
     $(this).addClass("past");
-  } else if (hour > currentTime) {
+  } else if (currentTime < hour) {
       $(this).addClass("future");
   } else {
       $(this).addClass("present");
@@ -52,7 +52,6 @@ $(".text-block").each(function(){
 });
 
 }
-
 
  timeColor ();
 
