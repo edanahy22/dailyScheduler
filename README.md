@@ -1,13 +1,12 @@
-# dailyScheduler
+# Work Day Scheduler
 
-Daily Scheduler is a work-day scheduler is a hourly planner where the user is able to put in their schedule for the day. 
+Work Day Scheduler is a work-day scheduler is a hourly planner where the user is able to put in their schedule for the day. 
 
 ## Development
 
 This web application was developed using HTML, CSS, and JS.
 
 It utilizes tools such as local storage, key word- this. It also uses third-party API's such as moment.js, Bootstrap, font awesome, google fonts, and jquery.
-
 
 ## Usage
 
@@ -22,6 +21,9 @@ The hours are color-coded according to the current time. If it is the current ho
 
 ## URL
 [Work-Day-SchedulerURL](https://edanahy22.github.io/dailyScheduler/)
+
+## Contact
+edanahy22@gmail.com
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
