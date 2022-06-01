@@ -18,7 +18,10 @@ The user can input their events for the hour and then click the save icon. Click
 The hours are color-coded according to the current time. If it is the current hour, the hour displays red. If it is in the future it displays green, and past displays gray. 
 
 ## Screenshot
-[Work Day Scheduler](./assets/images/Screen%20Shot%202022-05-08%20at%2010.26.30%20AM.png)
+![Work Day Scheduler](./assets/images/Screen%20Shot%202022-05-08%20at%2010.26.30%20AM.png)
 
 ## URL
 [Work-Day-SchedulerURL](https://edanahy22.github.io/dailyScheduler/)
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
